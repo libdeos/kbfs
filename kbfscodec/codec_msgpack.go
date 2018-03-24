@@ -134,6 +134,7 @@ func newCodecMsgpackHelper(handleUnknownFields bool) *CodecMsgpack {
 	handle := codec.MsgpackHandle{}
 	handle.Canonical = true
 	handle.WriteExt = true
+	handle.RecursiveEmptyCheck = true
 	handle.DecodeUnknownFields = handleUnknownFields
 	handle.EncodeUnknownFields = handleUnknownFields
 
