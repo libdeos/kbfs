@@ -191,10 +191,7 @@ type writerMetadataV2Future struct {
 	// Override WriterMetadata.WKeys.
 	WKeys tlfWriterKeyGenerationsV2Future
 	// Override WriterMetadata.Extra.
-	//
-	// TODO: Remove omitemptycheckstruct once we use a version of
-	// go-codec that supports omitempty for structs.
-	Extra writerMetadataExtraV2Future `codec:"x,omitempty,omitemptycheckstruct"`
+	Extra writerMetadataExtraV2Future `codec:"x,omitempty"`
 }
 
 func (wmf writerMetadataV2Future) toCurrent() WriterMetadataV2 {
